@@ -2,8 +2,11 @@ WR = WR or {}
 
 WR.DefaultState = {
     started = false,
-    stage = 0,
-    completed = false
+    completed = false,
+
+    flags = {},
+
+    quests = {}
 }
 
 local function initializeState()
@@ -16,7 +19,6 @@ local function initializeState()
     end
 
     print("[What Remains] State initialized")
-    print("[What Remains] Campaign stage: " .. WR.State.stage)
 end
 
 Events.OnInitGlobalModData.Add(initializeState)
